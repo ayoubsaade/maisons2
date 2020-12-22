@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { FirebaseService } from './firebase.service'
+import { Propriete } from '../Interface/propriete'
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +8,7 @@ import { Injectable } from '@angular/core';
 export class PropertiesService {
   isFrench = 1; // true --> french ; false --> english
 
+  /*
   louer = [
     {
       'id': 3,
@@ -44,7 +47,7 @@ export class PropertiesService {
       'Dimensions': [[['Terrain superficie', '2646.8 PC']], [['Land area', '2646.8 SF']]],
       'carac': [[['Fondation', 'Béton coulé'], ['Sous-sol', 'Aucun'], ['Zonage', 'Commercial'], ['Énergie pour le chauffage', 'Électricité'], ['Approvisionnement en eau', 'Municipalité'], ["Système d'égouts", 'Municipalité']], [['Foundation', 'Poured concrete'], ['Basement', 'None'], ['Zoning', 'Commercial'], ['Energy for heating ', ' Electricity '], [' Water supply ', ' Municipality '], ['Sewage system', ' Municipality ']]]
     }
-  ]
+  ]*/
 
   vendre = [
     {
@@ -253,6 +256,11 @@ export class PropertiesService {
       'url': "assets/vacant/"
     }]
 
-  constructor() {
+    louer : Propriete[];
+
+  constructor(private firebaseService : FirebaseService) {
+    this.firebaseService.getPropriete(false).then((data) => {
+      this.louer = data;
+    });
   }
 }
