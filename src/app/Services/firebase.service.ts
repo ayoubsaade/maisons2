@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
+/*
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Propriete } from '../Interface/propriete'
+import { Propriete } from '../Interface/propriete'*/
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
-
+  /*
   constructor(private afs: AngularFirestore) { }
 
 
@@ -27,7 +28,7 @@ export class FirebaseService {
     });
 
   }
-
+*/
 
 
 }
