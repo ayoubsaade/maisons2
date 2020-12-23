@@ -11,21 +11,21 @@
         <div class="w3-container">
             <div class="row info-lg">
                 <div class="col-8">
-                    <h3>{{prop.title[proper.isFrench]}} | <a href={{prop.urlRealtor}}
+                    <h3>{{prop.title}} | <a href={{prop.urlRealtor}}
                             class="realtor">{{wordBank.more_infos[proper.isFrench]}}</a></h3>
-                    <h4>{{prop.adress[proper.isFrench]}}, {{prop.city}}</h4>
+                    <h4>{{prop.adress}}, {{prop.city}}</h4>
                 </div>
 
                 <div class="col-4">
-                    <h4>{{wordBank.price_title[proper.isFrench]}}:</h4>
+                    <h4>{{wordBank.price_title}}:</h4>
                     <h3>{{prop.prix[proper.isFrench]}}</h3>
                 </div>
             </div>
             <div class="info-sm">
-                <h3>{{prop.title[proper.isFrench]}} | <a href={{prop.urlRealtor}}
+                <h3>{{prop.title}} | <a href={{prop.urlRealtor}}
                         class="realtor">{{wordBank.more_infos[proper.isFrench]}}</a></h3>
-                <h4>{{prop.adress[proper.isFrench]}}, {{prop.city}}</h4>
-                <h4>{{wordBank.price_title[proper.isFrench]}} : <strong>{{prop.prix[proper.isFrench]}}</strong></h4>
+                <h4>{{prop.adress}}, {{prop.city}}</h4>
+                <h4>{{wordBank.price_title}} : <strong>{{prop.prix[proper.isFrench]}}</strong></h4>
             </div>
             <br>
 
@@ -50,7 +50,7 @@
             <div style="margin-top : 20px;">
                 <h4><strong>{{wordBank.pertinent_infos[proper.isFrench]}} : </strong></h4>
                 <div class="relevantInfo">
-                    <p>{{wordBank.adresse[proper.isFrench]}}: {{ prop.adress[proper.isFrench] }}, {{prop.city}}</p>
+                    <p>{{wordBank.adresse[proper.isFrench]}}: {{ prop.adress }}, {{prop.city}}</p>
                     <p *ngIf="prop.EvalMuni">{{wordBank.eval_muni[proper.isFrench]}} : {{prop.EvalMuni}}</p>
                     <p *ngIf="prop.mls">mls : {{prop.mls}}</p>
                 </div>
@@ -77,17 +77,17 @@
                     </div>
                     <div class="col-6">
                         <p *ngIf="prop.nbPiedsCarre"><i class="fa fa-arrows-alt"></i> {{prop.nbPiedsCarre}}
-                            {{wordBank.dim_title[proper.isFrench]}}
+                            {{wordBank.dim_title}}
                         </p>
                     </div>
                     <div class="col-6">
                         <p *ngIf="prop.nbChambre"><i class="fa fa-fw fa-bed"></i>
-                            {{wordBank.bed_title[proper.isFrench]}}: {{prop.nbChambre}}</p>
+                            {{wordBank.bed_title}}: {{prop.nbChambre}}</p>
 
                     </div>
                     <div class="col-6">
                         <p *ngIf="prop.nbSalleBain"><i class="fa fa-fw fa-bath"></i>
-                            {{wordBank.bath_title[proper.isFrench]}}: {{prop.nbSalleBain}}
+                            {{wordBank.bath_title}}: {{prop.nbSalleBain}}
                         </p>
                     </div>
                 </div>

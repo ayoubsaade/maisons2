@@ -10,7 +10,7 @@
     <!-- Les propriétés en bandes -->
     <div class="lg-size">
         <div *ngFor="let item of this.louer">
-            <app-post id={{item.id}} urlImg="{{item.url}}/1.jpg" adress={{item.adress[propService.isFrench]}} city={{item.city}}
+            <app-post id={{item.id}} urlImg="{{item.url}}/1.jpg" adress={{item.adress}} city={{item.city}}
                 urlMap={{item.urlMap}} type={{item.sellType[propService.isFrench]}} prix={{item.prix[propService.isFrench]}} nbChambre={{item.nbChambre}}
                 nbSalleBain={{item.nbSalleBain}} nbPiedsCarre={{item.nbPiedsCarre}}></app-post>
             <hr>

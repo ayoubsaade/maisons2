@@ -27,19 +27,9 @@ export class FirebaseService {
 
   }
 
-  async wow() {
-
-    return new Promise((resolve, reject) => {
-      try{
-        this.afs
-          .collection("wow")
-          .doc("toSddZa04qK4dpwtUmBs").get().subscribe((data) => { resolve(data.data())})
-      }catch(error){
-        console.error("Error retrieving data : ", error);
-        reject();
-      }
-    });
-
+  
+  savePropriete(prop : any) {
+    this.afs.collection("propriete").add(prop);
   }
 
 

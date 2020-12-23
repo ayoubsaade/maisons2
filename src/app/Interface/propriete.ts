@@ -1,4 +1,5 @@
 export interface Propriete {
+    id : string;
     AConstruction : number | null;
     Description : any | null;
     Dimensions : any | null;

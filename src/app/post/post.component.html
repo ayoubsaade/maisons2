@@ -9,7 +9,10 @@
     </div>
 
     <div class="info">
+
         <h3 (click)="clicked()" class="link">{{adress}}</h3>
+
+
         <p>{{city}} | <a href={{urlMap}} *ngIf="urlMap">{{wordBank.seeMap[propService.isFrench]}}</a></p>
         <p>Type : {{type}}</p>
 
@@ -35,3 +38,14 @@
         </div>
     </div>
 </div>
+
+<!--
+
+<div *ngIf="condition; else elseBlock">
+  Content to render when condition is true.
+</div>
+<ng-template #elseBlock>
+  Content to render when condition is false.
+</ng-template>
+
+-->
