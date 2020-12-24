@@ -14,11 +14,9 @@ img {
   width: 60px;
   border-radius: 50%;
   background-color: black;
-  opacity: 90%;
 }
 .arrowContainer:hover{
   cursor: pointer;
-  opacity: 1;
 }
 
 .leftArrow{
@@ -51,13 +49,9 @@ img {
 
 .carousel-control-prev,
 .carousel-control-next {
-  opacity: 70%;
   width: 20px;
   background-color: black;
-}
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1;
+  opacity: 100% !important;
 }
 
 .presenting {

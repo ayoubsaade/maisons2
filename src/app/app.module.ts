@@ -29,7 +29,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-auth-firebase'),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
   providers: [],
