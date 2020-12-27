@@ -20,7 +20,8 @@ export class DescComponent implements OnInit {
   collapsCarac : boolean = false;
   
   sale : boolean = false;
-  
+
+
   constructor(public proper: PropertiesService, private route: ActivatedRoute, public router: Router,
     public wordBank : WordBankService) {
     

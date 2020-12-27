@@ -14,7 +14,7 @@ export class FirebaseService {
     return new Promise((resolve, reject) => {
       try{
         this.afs
-          .collection("propriete",  ref => ref.where('isVendre', '==', isVendre))
+          .collection("propriete",  ref => ref.where('isVendre', '==', isVendre).orderBy("prix", "desc"))
           .get()
           .subscribe((data) => {
             resolve(data);

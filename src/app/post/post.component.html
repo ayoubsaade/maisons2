@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col">
                 <p>{{wordBank.price_title[propService.isFrench]}} : </p>
-                <h3>{{prix}}</h3>
+                <h3 class="money">{{prix}}</h3>
             </div>
             <div class="col" *ngIf="nbChambre">
                 <h2>{{nbChambre}}</h2>
@@ -41,11 +41,6 @@
 
 <!--
 
-<div *ngIf="condition; else elseBlock">
-  Content to render when condition is true.
-</div>
-<ng-template #elseBlock>
-  Content to render when condition is false.
-</ng-template>
+
 
 -->

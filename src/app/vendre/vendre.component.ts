@@ -11,11 +11,13 @@ export class VendreComponent implements OnInit {
 
   vendre: any;
 
+
   constructor(public propService: PropertiesService, private router: Router) {
     this.vendre = propService.vendre
   }
 
   ngOnInit() {
+
   }
 
   click(id) {

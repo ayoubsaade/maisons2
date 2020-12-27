@@ -24,6 +24,10 @@ img {
     cursor : pointer
   }
   
+.link {
+  color : blue;
+}
+
   .row {
     width: 100%;
   }
@@ -35,5 +39,9 @@ img {
   
   #container {
     margin: 20px;
+  }
+
+  h3.money::before{
+    content:"$ ";
   }
   

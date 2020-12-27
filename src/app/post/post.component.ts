@@ -8,7 +8,7 @@ import { WordBankService } from '../Services/word-bank.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostComponent{
   @Input() id: number = undefined;
   @Input() urlImg: String = undefined;
   @Input() adress: String = undefined;
@@ -21,14 +21,9 @@ export class PostComponent implements OnInit {
   @Input() nbSalleBain: number = undefined;
   @Input() nbPiedsCarre: number = undefined;
 
-
-
   constructor(public router: Router, public propService : PropertiesService, 
-    public wordBank : WordBankService) { }
-
-  ngOnInit() {
-
-  }
+    public wordBank : WordBankService) {
+    }
 
   clicked() {
     this.router.navigate(['/desc/' + this.id]);

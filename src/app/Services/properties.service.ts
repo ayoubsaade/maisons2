@@ -16,7 +16,10 @@ export class PropertiesService {
     this.firebaseService.getPropriete(false).then((data) => {
       data.forEach(doc => {
         let temp : Propriete = <Propriete>{...doc.data(), id : doc.id};
-        const liste_string_object = ["prix", "sellType"]
+
+        temp["prix"] = Number(temp["prix"]).toLocaleString("en") + ' / month + GST ​​/ QST';
+
+        const liste_string_object = ["sellType"]
         
         liste_string_object.forEach(element => {
           if(temp[element]){
@@ -62,7 +65,9 @@ export class PropertiesService {
       data.forEach(doc => {
         let temp : Propriete = <Propriete>{...doc.data(), id : doc.id};
 
-        const liste_string_object = ["prix", "sellType"]
+        temp["prix"] = Number(temp["prix"]).toLocaleString("en")
+
+        const liste_string_object = ["sellType"]
 
         liste_string_object.forEach(element => {
           if(temp[element]){
@@ -108,13 +113,13 @@ export class PropertiesService {
       });
       
     });
-    
 
+    
     //this.genLouer()
     //this.genVendre()
 
 
-
+    console.log(this.louer)
 
   }
 
@@ -129,7 +134,7 @@ export class PropertiesService {
       'adress': ['336B Route Marie-Victorin', '336B Route Marie-Victorin'],
       'city': 'Saint-Pierre-Les-Becquets, G0X 2Z0',
       'urlMap': 'https://goo.gl/maps/dxRb8PhJ2k7n7PjS7',
-      'prix': ['3300 $/mois +TPS/TVQ', '$ 3300 / month + GST \u200b\u200b/ QST'],
+      'prix': 3300,
       'nbPiedsCarre': "28492.3",
       'AConstruction': 1957,
       'EvalMuni': '290 700 $',
@@ -147,7 +152,7 @@ export class PropertiesService {
       'adress': ['336A - 342 Route Marie-Victorin', '336A - 342 Route Marie-Victorin'],
       'city': 'Saint-Pierre-Les-Becquets, G0X 2Z0',
       'urlMap': 'https://goo.gl/maps/dxRb8PhJ2k7n7PjS7',
-      'prix': ['3750 $/mois +TPS/TVQ', '$ 3750 / month + GST \u200b\u200b/ QST'],
+      'prix': 3750,
       'nbPiedsCarre': 28492.3,
       'AConstruction': 1957,
       'EvalMuni': '290 700 $',
@@ -180,7 +185,7 @@ export class PropertiesService {
       'adress': ['336 - 342 Route Marie-Victorin', '336 - 342 Route Marie-Victorin'],
       'city': 'Saint-Pierre-Les-Becquets, G0X 2Z0',
       'urlMap': 'https://goo.gl/maps/X2iEDzNTFaniTPET6',
-      'prix': ['347 500 $', '$ 347,500'],
+      'prix': 347500,
       'nbPiedsCarre': 28492.3,
       'EvalMuni': '290 700 $',
       'mls': 12532040,
@@ -198,7 +203,7 @@ export class PropertiesService {
       'nbPiedsCarre': 11247.3,
       'city': "Saint-Pierre-Les-Becquets, G0X 2Z0",
       'urlMap': "https://goo.gl/maps/cbacnPPDr3ZEE9JA7",
-      'prix': ['24 000 $', ' $ 24,000 '],
+      'prix': 24000,
       'mls': 9682434,
       'urlRealtor': "https://www.realtor.ca/immobilier/22078461/route-marie-victorin-saint-pierre-les-becquets",
       'size': 3,
@@ -212,7 +217,7 @@ export class PropertiesService {
       'adress': ['88 - 90 Rue Principale', '88 - 90 Rue Principale '],
       'city': "Montcalm (Laurentides), J0T2V0",
       'urlMap': "https://goo.gl/maps/sLQ1AgZtQMZ8PKUb7",
-      'prix': ['90 000 $', ' $ 90,000 '],
+      'prix': 90000,
       'nbChambre': 5,
       'nbSalleBain': 2,
       'nbPiedsCarre': 64039.8,
@@ -232,7 +237,7 @@ export class PropertiesService {
       'adress': ['1 Rue Du Centre', ' 1 Rue Du Center '],
       'city': "Saint-Pierre-Les-Becquets, G0X 2Z0",
       'urlMap': "https://goo.gl/maps/7vGdwBPaeyeMfr9u5",
-      'prix': ['29 000 $', '29 000 $'],
+      'prix': 29000,
       'nbPiedsCarre': 78656.0,
       'EvalMuni': "30 500 $",
       'mls': 27737440,
@@ -249,7 +254,7 @@ export class PropertiesService {
       'adress': ['18e Avenue', '18th Avenue'],
       'city': "Saint-Adolphe-d'Howard (Laurentides), J0T2B0",
       'urlMap': "https://maps.google.com?q=%2018e%20Avenue%20J0T2B0",
-      'prix': ['10 000 $', '$ 10,000'],
+      'prix': 10000,
       'nbPiedsCarre': 16833.3,
       'EvalMuni': "10 800 $",
       'mls': 12097798,
@@ -266,7 +271,7 @@ export class PropertiesService {
       'adress': ["Ch. de l'Héritage", "Ch. De l'Héritage"],
       'city': "Saint-Adolphe-d'Howard (Laurentides), J0T2B0",
       'urlMap': "https://maps.google.com?q=%20Ch%2E%20de%20l%27H%C3%A9ritage%20J0T2B0",
-      'prix': ['18 000 $', '$ 18,000'],
+      'prix': 18000,
       'nbPiedsCarre': 59002.8,
       'EvalMuni': "18 000 $",
       'mls': 11274386,
@@ -283,7 +288,7 @@ export class PropertiesService {
       'adress': ['Ch. du Lac-Harel', 'Ch. du Lac-Harel '],
       'city': "Lac-Supérieur (Laurentides), J0T1P0",
       'urlMap': "https://maps.google.com?q=%20Ch%2E%20du%20Lac%2DHarel%20J0T1P0",
-      'prix': ['19 000 $', ' $ 19,000 '],
+      'prix': 19000,
       'nbPiedsCarre': 67537.8,
       'EvalMuni': "19 100 $",
       'mls': 27811021,
@@ -300,7 +305,7 @@ export class PropertiesService {
       'adress': ['Ch. Flamingo', 'Ch. Flamingo '],
       'city': "Saint-Adolphe-d'Howard (Laurentides), J0T2B0",
       'urlMap': "https://maps.google.com?q=%20Ch%2E%20Flamingo%20J0T2B0",
-      'prix': ['16 000 $', ' $ 16,000 '],
+      'prix': 16000,
       'nbPiedsCarre': 17123.9,
       'EvalMuni': "16 700 $",
       'mls': 25022339,
@@ -317,7 +322,7 @@ export class PropertiesService {
       'adress': ['Ch. des Trembles', ' Ch. des Trembles'],
       'city': "Saint-Adolphe-d'Howard (Laurentides), J0T2B0",
       'urlMap': "https://maps.google.com?q=%20Ch%2E%20des%20Trembles%20J0T2B0",
-      'prix': ['18 000 $', '$ 18,000'],
+      'prix': 18000,
       'nbPiedsCarre': 53750.4,
       'EvalMuni': "18 200 $",
       'mls': 14590552,
@@ -334,7 +339,7 @@ export class PropertiesService {
       'adress': ['22e Avenue', '22e Avenue'],
       'city': "22e Avenue, Val-Morin (Laurentides), J0T2R0",
       'urlMap': "https://maps.google.com?q=%2022e%20Avenue%20J0T2R0",
-      'prix': ['6 000 $', '$ 6,000'],
+      'prix': 6000,
       'nbPiedsCarre': 6922.8,
       'EvalMuni': "13 400 $",
       'mls': 12780751,
@@ -350,7 +355,7 @@ export class PropertiesService {
       'sellType': ['Terrain vacant', 'Vacant lot'],
       'adress': ['Boul des Laurentides', 'Boul des Laurentides'],
       'city': "Laval Pont Viau, Boul des Laurentides",
-      'prix': ['3 500 $', '$ 3,500'],
+      'prix': 3500,
       'nbPiedsCarre': 440.2,
       'EvalMuni': "3 000 $",
       'size': 1,
@@ -361,7 +366,7 @@ export class PropertiesService {
       'sellType': ['Terrain vacant', 'Vacant lot'],
       'adress': ['Montee Masson', 'Montee Masson'],
       'city': "Laval St Francois, Montee Masson",
-      'prix': ['1 200 $', '$ 1,200'],
+      'prix': 1200,
       'nbPiedsCarre': 1337.8,
       'EvalMuni': "1 500 $",
       'size': 1,
@@ -372,7 +377,7 @@ export class PropertiesService {
       'sellType': ['Terrain vacant', 'Vacant lot'],
       'adress': ['16E avenue', '16E avenue'],
       'city': "	16E avenue, Pointe Calumet",
-      'prix': ['2 000 $', '$ 2,000'],
+      'prix': 2000,
       'nbPiedsCarre': 9772.8,
       'EvalMuni': "2 500 $",
       'size': 1,
@@ -391,7 +396,9 @@ export class PropertiesService {
 
 
   saveInfo(prop : any, isVendre : boolean){
+    
     prop["isVendre"] = isVendre;
+    //delete prop["isVendre"];
 
     delete prop["id"];
     if(prop["title"]){
@@ -403,7 +410,7 @@ export class PropertiesService {
     }
     
     
-    const liste_string_object = ["prix", "sellType"]
+    const liste_string_object = ["sellType"]
 
     liste_string_object.forEach(element => {
       if(prop[element]){

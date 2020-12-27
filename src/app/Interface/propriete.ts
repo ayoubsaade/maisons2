@@ -9,7 +9,7 @@ export interface Propriete {
     city : string | null;
     mls : number | null;
     nbPiedsCarre : string | null;
-    prix : string | object | null;
+    prix : number | string | null;
     sellType : string | object | null;
     size : number | null;
     title : string | null;

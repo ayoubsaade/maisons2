@@ -11,7 +11,7 @@
     <div class="lg-size">
         <div *ngFor="let item of this.louer">
             <app-post id={{item.id}} urlImg="{{item.url}}/1.jpg" adress={{item.adress}} city={{item.city}}
-                urlMap={{item.urlMap}} type={{item.sellType[propService.isFrench]}} prix={{item.prix[propService.isFrench]}} nbChambre={{item.nbChambre}}
+                urlMap={{item.urlMap}} type={{item.sellType[propService.isFrench]}} prix={{item.prix}} nbChambre={{item.nbChambre}}
                 nbSalleBain={{item.nbSalleBain}} nbPiedsCarre={{item.nbPiedsCarre}}></app-post>
             <hr>
         </div>
